@@ -1,0 +1,67 @@
+{
+  "name": "@devdattatalele/gmail-mcp-server",
+  "version": "2.0.0",
+  "description": "A robust Gmail MCP server with intelligent authentication, token management, and comprehensive email operations",
+  "type": "module",
+  "main": "dist/index.js",
+  "bin": {
+    "gmail-mcp": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "auth": "node dist/index.js auth",
+    "dev": "tsc --watch",
+    "prepare": "npm run build"
+  },
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "gmail",
+    "mcp",
+    "model-context-protocol",
+    "email-automation",
+    "google-api",
+    "oauth2",
+    "claude-desktop",
+    "ai-integration",
+    "email-client"
+  ],
+  "author": {
+    "name": "Devdatta Talele",
+    "email": "taleledevdatta@gmail.com",
+    "url": "https://github.com/devdattatalele"
+  },
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devdattatalele/gmail-mcp-server.git"
+  },
+  "bugs": {
+    "url": "https://github.com/devdattatalele/gmail-mcp-server/issues"
+  },
+  "homepage": "https://github.com/devdattatalele/gmail-mcp-server#readme",
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.4.0",
+    "@types/mime-types": "^2.1.4",
+    "google-auth-library": "^9.4.1",
+    "googleapis": "^129.0.0",
+    "mcp-evals": "^1.0.18",
+    "mime-types": "^3.0.1",
+    "nodemailer": "^7.0.3",
+    "open": "^10.0.0",
+    "zod": "^3.22.4",
+    "zod-to-json-schema": "^3.22.1"
+  },
+  "devDependencies": {
+    "@types/node": "^20.10.5",
+    "@types/nodemailer": "^6.4.17",
+    "typescript": "^5.3.3"
+  }
+}
