@@ -1,0 +1,124 @@
+name: CI
+
+on:
+  push:
+    branches: [ main, develop ]
+  pull_request:
+    branches: [ main, develop ]
+
+jobs:
+  build:
+    name: Build and Test
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node-version: [16.x, 18.x, 20.x]
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js ${{ matrix.node-version }}
+      uses: actions/setup-node@v4
+      with:
+        node-version: ${{ matrix.node-version }}
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build project
+      run: npm run build
+
+    - name: Check build output
+      run: |
+        if [ ! -f "dist/index.js" ]; then
+          echo "Build failed: dist/index.js not found"
+          exit 1
+        fi
+      shell: bash
+
+    - name: Upload build artifacts
+      if: matrix.os == 'ubuntu-latest' && matrix.node-version == '20.x'
+      uses: actions/upload-artifact@v3
+      with:
+        name: dist
+        path: dist/
+
+  lint:
+    name: Lint Code
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Check TypeScript
+      run: npx tsc --noEmit
+
+  security:
+    name: Security Audit
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+
+    - name: Run npm audit
+      run: npm audit --audit-level=moderate
+      continue-on-error: true
+
+    - name: Check for credentials
+      run: |
+        if grep -r "gcp-oauth.keys.json\|credentials.json" --include="*.ts" --include="*.js" src/; then
+          echo "Warning: Found hardcoded credential references"
+          exit 1
+        fi
+      shell: bash
+
+  package:
+    name: Test Package
+    runs-on: ubuntu-latest
+    needs: build
+
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v4
+      with:
+        node-version: '20.x'
+        cache: 'npm'
+
+    - name: Install dependencies
+      run: npm ci
+
+    - name: Build
+      run: npm run build
+
+    - name: Test package creation
+      run: npm pack
+
+    - name: Verify package contents
+      run: |
+        tar -tzf *.tgz | grep "dist/index.js" || exit 1
+        tar -tzf *.tgz | grep "README.md" || exit 1
+        tar -tzf *.tgz | grep "LICENSE" || exit 1

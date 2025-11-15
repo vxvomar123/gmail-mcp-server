@@ -1,8 +1,22 @@
 # Gmail MCP Server
 
-> **A powerful Model Context Protocol server for Gmail integration with Claude Desktop**
+[![GitHub stars](https://img.shields.io/github/stars/devdattatalele/gmail-mcp-server?style=social)](https://github.com/devdattatalele/gmail-mcp-server/stargazers)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Node.js](https://img.shields.io/badge/Node.js-16+-43853D?logo=node.js&logoColor=white)](https://nodejs.org/)
 
-Transform your Gmail experience with AI-powered email management. This MCP server provides intelligent authentication, automatic token refresh, and comprehensive email operations - all accessible through natural language commands in Claude.
+> **The Gmail MCP server that actually works** - No OpenAI API required, rock-solid authentication, zero configuration hassles
+
+Transform your Gmail into an AI-powered inbox with natural language commands through Claude Desktop. Send emails, manage labels, automate organization, download attachments - all without leaving your conversation.
+
+**✨ Key Highlights:**
+- 🔐 **Bulletproof Authentication** - Intelligent token management with auto-refresh
+- 🚀 **Production Ready** - TypeScript, comprehensive error handling, battle-tested
+- 💰 **100% Free** - No OpenAI API costs, no hidden fees
+- 🔒 **Privacy First** - Direct Gmail API, no third-party AI dependencies
+- 📦 **Feature Complete** - Attachments, labels, filters, batch operations, and more
+
+**[Why choose this over alternatives?](docs/COMPARISON.md)** | **[See it in action](docs/SHOWCASE.md)** | **[Start in 5 minutes](#quick-start)**
 
 ---
 
