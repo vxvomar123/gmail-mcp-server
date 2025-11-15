@@ -20,6 +20,20 @@ Transform your Gmail into an AI-powered inbox with natural language commands thr
 
 ---
 
+## 📚 Documentation
+
+- **[Complete API Reference](docs/API.md)** - Detailed documentation for all tools
+- **[Troubleshooting Guide](docs/TROUBLESHOOTING.md)** - Solutions for common issues
+- **[Example Use Cases](examples/README.md)** - Practical examples and workflows
+- **[Comparison with Alternatives](docs/COMPARISON.md)** - Why choose this server
+- **[Showcase](docs/SHOWCASE.md)** - See what you can build
+- **[Contributing Guide](CONTRIBUTING.md)** - How to contribute
+- **[Code of Conduct](CODE_OF_CONDUCT.md)** - Community guidelines
+- **[Security Policy](SECURITY.md)** - Security best practices
+- **[Changelog](CHANGELOG.md)** - Version history and updates
+
+---
+
 ## Why This Project?
 
 Traditional Gmail integrations struggle with authentication complexity and token management. This server solves those problems with:
@@ -477,10 +491,24 @@ Built using:
 
 ## Support
 
-- **Documentation**: [Full API Reference](https://github.com/devdattatalele/gmail-mcp-server/wiki)
+- **Documentation**: [Full API Reference](docs/API.md)
+- **Troubleshooting**: [Common Issues & Solutions](docs/TROUBLESHOOTING.md)
+- **Examples**: [Practical Use Cases](examples/README.md)
 - **Issues**: [GitHub Issues](https://github.com/devdattatalele/gmail-mcp-server/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/devdattatalele/gmail-mcp-server/discussions)
+- **Security**: [Report Vulnerabilities](SECURITY.md)
 - **Email**: taleledevdatta@gmail.com
 
 ---
 
+## Star History
+
+If this project helped you, please consider giving it a ⭐!
+
+[![Star History Chart](https://api.star-history.com/svg?repos=devdattatalele/gmail-mcp-server&type=Date)](https://star-history.com/#devdattatalele/gmail-mcp-server&Date)
+
+---
+
 **Made with ❤️ by Devdatta Talele**
+
+Special thanks to all [contributors](https://github.com/devdattatalele/gmail-mcp-server/graphs/contributors) who make this project better!
